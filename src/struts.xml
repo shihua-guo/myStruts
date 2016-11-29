@@ -1,0 +1,22 @@
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<!-- 开发者模式 -->
+	<constant name="struts.devMode" value="true"></constant>
+	<!-- action的后缀 -->
+	<constant name="struts.action.extension" value="action"></constant>
+	<!-- 动态调用 -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
+	<package name="test" extends="struts-default">
+		<action name="struts1" class="com.briup.struts.Struts1">
+			<result name="success">/error1.html</result>
+			<result name="error"></result>
+		</action>
+		<action name="login" class="com.briup.struts.Struts1" method="login">
+			<result name="success">/error1.html</result>
+			<result name="error"></result>
+		</action>
+	</package>
+</struts>
